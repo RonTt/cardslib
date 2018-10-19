@@ -2,16 +2,21 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.0'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
 ext {
-    compileSdkVersion = 22
-    buildToolsVersion = "22.0.1"
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
 }
 
 def isReleaseBuild() {
@@ -24,6 +29,10 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 
